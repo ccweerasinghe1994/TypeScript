@@ -1,3 +1,3 @@
-const apples:number = 34;
+let apples:number = 34;
 
 apples = 34;
