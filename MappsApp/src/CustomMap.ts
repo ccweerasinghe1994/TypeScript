@@ -4,6 +4,8 @@ interface Mapable {
     lat: number;
     lng: number;
   };
+
+  markerContent(): string;
 }
 
 export class CustomMap {
@@ -29,11 +31,10 @@ export class CustomMap {
 
     marker.addListener("click", () => {
       const infowindow = new google.maps.InfoWindow({
-        content: "hi there"
+        content: mapable.markerContent()
       });
 
-      infowindow.open(this.googleMap,marker);
-
+      infowindow.open(this.googleMap, marker);
     });
   }
 }
