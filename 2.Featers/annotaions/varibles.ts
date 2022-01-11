@@ -30,8 +30,8 @@ const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 };
 
-// hen to use anotation
-// fuctions that returns any type
+// hen to use annotation
+// functions that returns any type
 
 const json = '{"x":10,"y":20}';
 
@@ -46,7 +46,7 @@ for (let i = 0; i < words.length; i++) {
   }
 }
 
-//3) varible whose type cannot be inferred correcty
+//3) variable whose type cannot be inferred correctly
 
 let number = [-10, -1, 12];
 let numberAboveZero:boolean|number = false;
