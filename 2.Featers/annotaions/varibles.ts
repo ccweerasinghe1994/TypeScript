@@ -30,7 +30,7 @@ const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 };
 
-// hen to use annotation
+// then to use annotation
 // functions that returns any type
 
 const json = '{"x":10,"y":20}';
