@@ -1,43 +1,25 @@
-// class Vehicle {
-
-//     constructor(public color:string){
-
-//     }
-//   public drive(): void {
-//     console.log("chugga chugga");
-//   }
-
-//   public honk(): void {
-//     console.log("beep");
-//   }
-// // }
-// class Car extends Vehicle {
-//     constructor(public wheels:number,color:string){
-//         super('red');
-
-//     }
-//    drive(): void {
-//     console.log("vroom");
-//   }
-// }
-// const vehicle = new Vehicle('orange');
-
-// // console.log("hello w");
-// // vehicle.honk();
-// // vehicle.honk();
-// // vehicle.honk();
-// // vehicle.honk();
-// // vehicle.drive();
-
-// const car = new Car(12,'vlue');
-// // car.drive();
-
 class Vehicle {
-  drive(): void {
-    console.log("chugga chhugga");
+  constructor(public color: string) {}
+  protected honk(): void {
+    console.log("honk");
   }
 }
 
-const vehicle = new Vehicle();
+class Car extends Vehicle {
+  constructor(public wheels: number, color: string) {
+    super(color);
+  }
+  private drive(): void {
+    console.log("vroom");
+  }
 
-vehicle.drive();
+  driveProcess(): void {
+    console.log(this.drive());
+    console.log(this.honk());
+  }
+}
+
+const vehicle = new Vehicle("red");
+const car = new Car(4, "orange");
+
+car.driveProcess();
